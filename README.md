@@ -2,6 +2,7 @@
 ![Netflix Logo](https://pngimg.com/uploads/netflix/netflix_PNG25.png)
 ## Objective
 ## Schema 
+
 '''sql
 create table netflix (
  show_id      VARCHAR(5),
@@ -29,7 +30,7 @@ select distinct type from netflix;
 
 ## -- 15 Business Problems --
 
-## -- 1. Count the number of movies vs TV shows ?
+### -- 1. Count the number of movies vs TV shows ?
  
 '''sql
 select * from netflix 
@@ -40,8 +41,8 @@ from netflix
 group by type
 '''
 
--- 2. Find the most common rating for movies and Tv Shows ?
-
+### -- 2. Find the most common rating for movies and Tv Shows ?
+'''sql
 select type , rating from netflix
 
 select 
@@ -84,6 +85,7 @@ Group by 1,2
 ) as T1
 where 
 ranking = 1
+'''
 
 -- 3. List all movies released in specific year (e.g, 2020) ?
 
