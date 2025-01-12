@@ -2,8 +2,7 @@
 ![Netflix Logo](https://pngimg.com/uploads/netflix/netflix_PNG25.png)
 ## Objective
 ## Schema 
--- Netflix Project  --
-
+'''sql
 create table netflix (
  show_id      VARCHAR(5),
     type         VARCHAR(10),
@@ -18,6 +17,7 @@ create table netflix (
     listed_in    VARCHAR(250),
     description  VARCHAR(550)
 );
+'''
 
 select * from netflix;
 
@@ -27,16 +27,18 @@ from netflix;
 
 select distinct type from netflix;
 
--- 15 Business Problems --
+## -- 15 Business Problems --
 
- -- 1. Count the number of movies vs TV shows ?
+## -- 1. Count the number of movies vs TV shows ?
  
+'''sql
 select * from netflix 
 
 select type, 
 count(*) as total_content
 from netflix
 group by type
+'''
 
 -- 2. Find the most common rating for movies and Tv Shows ?
 
